@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="explain">
+	Click on a post title to see its details.
+	<br />Only the latest two posts will be featured here. Click on "View Archives" to view all posts.
+</div>
+
+{% for post in object_list %}
+
+<h2><a href="/{{post.id}}">{{ post.title }}</a></h2>
+
+
+
+{% endfor %}
+
+
+<div class="addNew">
+	To add a new post or a new author, <a href="/admin/">Click Here</a> and sign in (admin/admin)
+</div>
+
+<br/>
+<div class="archives">
+	<a href="/archives/">View Archives</a>
+</div>
+
+{% endblock %}
